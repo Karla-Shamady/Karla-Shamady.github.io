@@ -1,29 +1,70 @@
 <!DOCTYPE html>
-<html>
- <head>
-        <title>Formulario</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/estilos.css">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos</title>
+    <script type="text/javascript">
+    function obtenerdatos()
+    {
+        var boleta = parseFloat(document.getElementById('boleta').value);
+        var nombre = document.getElementById('nombre').value;
+        var grupo = parseFloat(document.getElementById('grupo').value);
+        var materia = document.getElementById('materia').value;
+        var fecha = parseFloat(document.getElementById('fecha').value);
+
+        document.registro.Nboleta.value = boleta;
+        document.registro.Nnombre.value = nombre;
+        document.registro.Ngrupo.value = grupo;
+        document.registro.Nmateria.value = materia;
+        document.registro.Nfechaobtenida.value = fecha;
+    }
+
+
+    </script>
+</head>
 <body>
-<form id="formulario" action="javascript:enviar()">
-        <p>Boleta: <input type="number" name="boleta" min="1900"></p>
-        <p>Nombre: <input type="text" name="nombre" size="40"></p>
-        <p>Grupo: <input type="number" name="grupo" min="1900"></p>
-        <p>Materia: <input type="text" name="materia" size="40"></p>
-        <input type="date" id="start" name="trip-start"
-       value="2020-07-22"
-       min="2020-01-01" max="2020-12-31">
-       
-        <p>
-          <input type="submit" value="Enviar">
-          <input type="reset" value="Borrar">
-        </p>
-      </form>
-        <footer>
-            Copyright 2020 Vasquez Hernandez Karla Shamady
-        </footer>
+    <form name="registro">
+<table border="1">
+    <tr>
+        <td>Boleta:</td><td><input type="text" name="boleta" id="boleta"> </td>
+    </tr>
+    <tr>
+        <td>Nombre:</td><td><input type="text" name="nombre" id="nombre"></td>
+    </tr>
+    <tr>
+        <td>Grupo:</td><td><input type="text" name="grupo" id="grupo"></td>
+    </tr>
+    <tr>
+        <td>Materia:</td><td><input type="text" name="materia" id="materia"></td>
+    </tr>
+    <tr>
+        <td>Fecha:</td><td><input type="text" name="fecha" id="fecha"></td>
+    </tr>
+    <tr>
+        <td colspan "2"><input type="button" name="btn1" value="Enviar" onclick="obtenerdatos()"></td>
+    </tr>
+</table><br/><br/><br/>
+
+
+
+<table border="1">
+<tr>
+    <td>Boleta:</td><td><input type="text" name="Nboleta" id="Nboleta"></td>
+</tr>
+<tr>
+    <td>Nombre:</td><td><input type="text" name="Nnombre" id="Nnombre"></td>
+</tr>
+<tr>
+    <td>Grupo:</td><td><input type="text" name="Ngrupo" id="Ngrupo"></td>
+</tr>
+<tr>
+    <td>Materia:</td><td><input type="text" name="Nmateria" id="Nmateria"></td>
+</tr>
+<tr>
+    <td>Fecha:</td><td><input type="text" name="Nfecha" id="Nfecha"></td>
+</tr>
+</table>
+</form>
 </body>
-<script src="js/js.js"></script>
 </html>
